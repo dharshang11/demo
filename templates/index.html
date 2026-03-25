@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Port Scanner</title>
+</head>
+<body>
+    <h2>Live Port Scanner</h2>
+
+    <form method="POST">
+        Host: <input type="text" name="host" required><br><br>
+        Start Port: <input type="number" name="start_port" required><br><br>
+        End Port: <input type="number" name="end_port" required><br><br>
+
+        <button type="submit">Scan</button>
+    </form>
+
+    {% if results is not none %}
+        <h3>Open Ports:</h3>
+        <ul>
+            {% for port in results %}
+                <li>{{ port }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
