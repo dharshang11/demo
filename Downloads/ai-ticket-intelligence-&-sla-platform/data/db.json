@@ -1,0 +1,556 @@
+{
+  "users": [
+    {
+      "id": "u1",
+      "name": "Sarah Jenkins",
+      "email": "sarah.jenkins@enterprise-core.com",
+      "role": "lead",
+      "status": "active",
+      "skills": [
+        "Security",
+        "Cloud",
+        "Infrastructure"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150"
+    },
+    {
+      "id": "u2",
+      "name": "Rahul Sharma",
+      "email": "rahul.sharma@enterprise-core.com",
+      "role": "member",
+      "status": "active",
+      "skills": [
+        "Database",
+        "Performance",
+        "Application"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150"
+    },
+    {
+      "id": "u3",
+      "name": "Priya Patel",
+      "email": "priya.patel@enterprise-core.com",
+      "role": "member",
+      "status": "active",
+      "skills": [
+        "Network",
+        "Security",
+        "Authentication"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150"
+    },
+    {
+      "id": "u4",
+      "name": "John Doe",
+      "email": "john.doe@enterprise-core.com",
+      "role": "member",
+      "status": "active",
+      "skills": [
+        "Application",
+        "Cloud",
+        "Infrastructure",
+        "Other"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150"
+    },
+    {
+      "id": "u5",
+      "name": "Alex Rivera",
+      "email": "alex.rivera@enterprise-core.com",
+      "role": "member",
+      "status": "inactive",
+      "skills": [
+        "Infrastructure",
+        "Performance"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150"
+    },
+    {
+    "id": "u68x8",
+    "name": "Dharshan",
+    "email": "dharshang1101@gmail.com",
+    "role": "lead",
+    "status": "active",
+    "skills": [
+    "Security"
+    ],
+    "avatar": "WhatsApp_Image_2026-05-08_at_20.02.47.jpeg"
+    }
+  ],
+
+  "tickets": [
+    {
+      "id": "T1001",
+      "subject": "CRITICAL: Production DB Master Node is unresponsive - Out of Disk Space",
+      "body": "Our automatic alert has triggered. The master database node pg-db-01 is experiencing 100% disk usage on /var/log/postgresql, causing connection failures for all API client services. Application is returning 500 server errors on core services.",
+      "sender": "nagios-alerts@enterprise-core.com",
+      "source": "gmail",
+      "status": "in_progress",
+      "created_at": "2026-06-09T06:58:32.379Z",
+      "updated_at": "2026-06-09T07:58:32.379Z"
+    },
+    {
+      "id": "T1002",
+      "subject": "Urgent: Suspicious auth requests detected from foreign subnet",
+      "body": "Our SIEM system noticed an unusual spike (over 450 authentication attempts per minute) from IP subnet 198.51.100.0/24 trying to access internal API server accounts. Need database logs review and block rule implementation ASAP.",
+      "sender": "siem-security@enterprise-core.com",
+      "source": "gmail",
+      "status": "open",
+      "created_at": "2026-06-09T04:58:32.379Z",
+      "updated_at": "2026-06-09T04:58:32.379Z"
+    },
+    {
+      "id": "T1003",
+      "subject": "Slack connection Webhook timeout warning",
+      "body": "Users are reporting that real-time Slack notifications are failing to post. Looks like a DNS query latency issue when communicating with cellular webhook endpoints.",
+      "sender": "alerts@slack-corp.com",
+      "source": "outlook",
+      "status": "resolved",
+      "created_at": "2026-06-08T20:58:32.379Z",
+      "updated_at": "2026-06-08T23:58:32.379Z"
+    },
+    {
+      "id": "T1004",
+      "subject": "Need system network topology diagram update",
+      "body": "Please refresh the infrastructure draw.io blueprint to reflect the newly provisioned isolated subnets in our US-East region for SLA compliance audits.",
+      "sender": "regulatory-compliance@enterprise-core.com",
+      "source": "manual",
+      "status": "closed",
+      "created_at": "2026-06-07T08:58:32.379Z",
+      "updated_at": "2026-06-07T20:58:32.379Z"
+    },
+    {
+      "id": "T1005",
+      "subject": "High Latency / SLA Breach Risk on Asia South Gateway",
+      "body": "BGP routing instability has caused massive package drop rate on the main corporate VPN tunnel connected to the Bangalore engineering center. Communication with remote developers is completely hindered.",
+      "sender": "networks-noc@enterprise-core.com",
+      "source": "gmail",
+      "status": "in_progress",
+      "created_at": "2026-06-09T05:22:32.379Z",
+      "updated_at": "2026-06-09T05:22:32.379Z"
+    },
+    {
+      "id": "T1006",
+      "subject": "Kubernetes Pod CrashLoopBackOff: auth-api-service",
+      "body": "Kubernetes deployment auth-api-service pod keeps restarting. Container logs indicate memory leak / Out of Memory killing. Need pod resource limit expansion in production cluster specs.",
+      "sender": "kubernetes-noc@enterprise-core.com",
+      "source": "outlook",
+      "status": "open",
+      "created_at": "2026-06-09T07:28:32.379Z",
+      "updated_at": "2026-06-09T07:28:32.379Z"
+    },
+    {
+      "id": "T1007",
+      "subject": "OAuth login loop for standard customer portal",
+      "body": "We are receiving multiples tickets from corporate customers saying that they get redirected back to login screen continuously when entering OAuth callback URL. Cookies mismatch might be the cause after the latest TLS certificate upgrade.",
+      "sender": "customer-support@retailer_ext.com",
+      "source": "csv",
+      "status": "resolved",
+      "created_at": "2026-06-08T10:58:32.379Z",
+      "updated_at": "2026-06-08T16:58:32.379Z"
+    },
+    {
+      "id": "T1008",
+      "subject": "SECURITY WARNING: API console authentication token exposed on public github repository",
+      "body": "Automated scan detected that deep-integration-developer-key has been accidentally committed in cleartext to master branch of our public client sdk repository. We need immediate revocation of the secret, log checking, and SSH rotation across API servers.",
+      "sender": "github-security-audit@enterprise-core.com",
+      "source": "gmail",
+      "status": "open",
+      "created_at": "2026-06-09T08:58:32.380Z",
+      "updated_at": "2026-06-09T08:58:32.380Z"
+    },
+    {
+      "id": "T1009",
+      "subject": "SECURITY WARNING: API console authentication token exposed on public github repository",
+      "body": "Automated scan detected that deep-integration-developer-key has been accidentally committed in cleartext to master branch of our public client sdk repository. We need immediate revocation of the secret, log checking, and SSH rotation across API servers.",
+      "sender": "github-security-audit@enterprise-core.com",
+      "source": "gmail",
+      "status": "open",
+      "created_at": "2026-06-09T09:07:32.386Z",
+      "updated_at": "2026-06-09T09:07:32.386Z"
+    }
+  ],
+  "ticket_analysis": [
+    {
+      "ticket_id": "T1001",
+      "category": "Database",
+      "complexity": 5,
+      "priority": "P1",
+      "business_impact": "High",
+      "recommendation": "Increase disk size of master node root partition and truncate pg_wal or clear bloated postgresql log files immediately to restore service."
+    },
+    {
+      "ticket_id": "T1002",
+      "category": "Security",
+      "complexity": 4,
+      "priority": "P2",
+      "business_impact": "High",
+      "recommendation": "Deploy dynamic ingress IP block rule on cloud firewall to counter 198.51.100.0/24 access. Audit affected API keys."
+    },
+    {
+      "ticket_id": "T1003",
+      "category": "Application",
+      "complexity": 2,
+      "priority": "P3",
+      "business_impact": "Medium",
+      "recommendation": "Modify dns_resolver timeout configs in slack webhook dispatcher engine and add background retry queue."
+    },
+    {
+      "ticket_id": "T1004",
+      "category": "Infrastructure",
+      "complexity": 1,
+      "priority": "P4",
+      "business_impact": "Low",
+      "recommendation": "Retrieve network layout changes from Cloud Formation logs and update the static Atlassian Confluence documentation page."
+    },
+    {
+      "ticket_id": "T1005",
+      "category": "Network",
+      "complexity": 4,
+      "priority": "P1",
+      "business_impact": "High",
+      "recommendation": "Reroute local transit VPN tunnels traffic temporarily over back up link (Asia West) while ISP fixes BGP handshake config."
+    },
+    {
+      "ticket_id": "T1006",
+      "category": "Cloud",
+      "complexity": 3,
+      "priority": "P2",
+      "business_impact": "Medium",
+      "recommendation": "Expand default Kubernetes RAM memory limits allocation in patch commit and test the container garbage disposal speed."
+    },
+    {
+      "ticket_id": "T1007",
+      "category": "Authentication",
+      "complexity": 2,
+      "priority": "P3",
+      "business_impact": "High",
+      "recommendation": "Set correct Secure and SameSite flags in application OAuth cookies configs to match new secure HTTPS configurations."
+    },
+    {
+      "ticket_id": "T1008",
+      "category": "Security",
+      "complexity": 4,
+      "priority": "P2",
+      "business_impact": "High",
+      "recommendation": "Security Alert: Deploy immediate IP blocks on edge firewalls. Identify source accounts, invoke rotational API tokens workflow, and scan audit trails."
+    },
+    {
+      "ticket_id": "T1009",
+      "category": "Security",
+      "complexity": 4,
+      "priority": "P2",
+      "business_impact": "High",
+      "recommendation": "Security Alert: Deploy immediate IP blocks on edge firewalls. Identify source accounts, invoke rotational API tokens workflow, and scan audit trails."
+    }
+  ],
+  "sla_tracking": [
+    {
+      "ticket_id": "T1001",
+      "deadline": "2026-06-09T10:58:32.379Z",
+      "duration_hours": 4,
+      "remaining_minutes": 108,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1002",
+      "deadline": "2026-06-09T12:58:32.379Z",
+      "duration_hours": 8,
+      "remaining_minutes": 228,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1003",
+      "deadline": "2026-06-09T20:58:32.379Z",
+      "duration_hours": 24,
+      "remaining_minutes": 720,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1004",
+      "deadline": "2026-06-09T08:58:32.379Z",
+      "duration_hours": 48,
+      "remaining_minutes": 2160,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1005",
+      "deadline": "2026-06-09T09:22:32.379Z",
+      "duration_hours": 4,
+      "remaining_minutes": 12,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1006",
+      "deadline": "2026-06-09T15:28:32.379Z",
+      "duration_hours": 8,
+      "remaining_minutes": 378,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1007",
+      "deadline": "2026-06-09T10:58:32.379Z",
+      "duration_hours": 24,
+      "remaining_minutes": 120,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1008",
+      "deadline": "2026-06-09T16:58:32.380Z",
+      "duration_hours": 8,
+      "remaining_minutes": 468,
+      "is_breached": false
+    },
+    {
+      "ticket_id": "T1009",
+      "deadline": "2026-06-09T17:07:32.386Z",
+      "duration_hours": 8,
+      "remaining_minutes": 477,
+      "is_breached": false
+    }
+  ],
+  "risk_predictions": [
+    {
+      "ticket_id": "T1001",
+      "risk_score": 80,
+      "risk_level": "High",
+      "factors": [
+        "Moderate SLA time pressure (< 50% remaining)",
+        "Critical Priority (P1 Core Incident)",
+        "High incident technical complexity: Rating 5/5",
+        "High Business Impact on downstream systems"
+      ]
+    },
+    {
+      "ticket_id": "T1002",
+      "risk_score": 65,
+      "risk_level": "High",
+      "factors": [
+        "Moderate SLA time pressure (< 50% remaining)",
+        "Urgent Priority (P2 Significant Outage)",
+        "High incident technical complexity: Rating 4/5",
+        "High Business Impact on downstream systems"
+      ]
+    },
+    {
+      "ticket_id": "T1003",
+      "risk_score": 15,
+      "risk_level": "Low",
+      "factors": [
+        "Resolved state",
+        "Simple application issue"
+      ]
+    },
+    {
+      "ticket_id": "T1004",
+      "risk_score": 5,
+      "risk_level": "Low",
+      "factors": [
+        "Closed state",
+        "Documentation simple task",
+        "Generous SLA cushion"
+      ]
+    },
+    {
+      "ticket_id": "T1005",
+      "risk_score": 100,
+      "risk_level": "Critical",
+      "factors": [
+        "SLA Breach is IMMINENT (< 30 min remaining)",
+        "Critical Priority (P1 Core Incident)",
+        "High incident technical complexity: Rating 4/5",
+        "High Business Impact on downstream systems"
+      ]
+    },
+    {
+      "ticket_id": "T1006",
+      "risk_score": 38,
+      "risk_level": "Medium",
+      "factors": [
+        "Sufficient SLA cushion (> 50% remaining)",
+        "Urgent Priority (P2 Significant Outage)"
+      ]
+    },
+    {
+      "ticket_id": "T1007",
+      "risk_score": 10,
+      "risk_level": "Low",
+      "factors": [
+        "Resolved state",
+        "High Business Impact fully addressed"
+      ]
+    },
+    {
+      "ticket_id": "T1008",
+      "risk_score": 50,
+      "risk_level": "Medium",
+      "factors": [
+        "Sufficient SLA cushion (> 50% remaining)",
+        "Urgent Priority (P2 Significant Outage)",
+        "High incident technical complexity: Rating 4/5",
+        "High Business Impact on downstream systems"
+      ]
+    },
+    {
+      "ticket_id": "T1009",
+      "risk_score": 50,
+      "risk_level": "Medium",
+      "factors": [
+        "Sufficient SLA cushion (> 50% remaining)",
+        "Urgent Priority (P2 Significant Outage)",
+        "High incident technical complexity: Rating 4/5",
+        "High Business Impact on downstream systems"
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "ticket_id": "T1001",
+      "assigned_user_id": "u2",
+      "assigned_at": "2026-06-09T07:10:32.379Z",
+      "assigned_by": "system"
+    },
+    {
+      "ticket_id": "T1002",
+      "assigned_user_id": "u3",
+      "assigned_at": "2026-06-09T05:10:32.379Z",
+      "assigned_by": "system"
+    },
+    {
+      "ticket_id": "T1003",
+      "assigned_user_id": "u4",
+      "assigned_at": "2026-06-08T21:28:32.379Z",
+      "assigned_by": "system"
+    },
+    {
+      "ticket_id": "T1004",
+      "assigned_user_id": "u1",
+      "assigned_at": "2026-06-07T09:28:32.379Z",
+      "assigned_by": "lead"
+    },
+    {
+      "ticket_id": "T1005",
+      "assigned_user_id": "u3",
+      "assigned_at": "2026-06-09T05:28:32.379Z",
+      "assigned_by": "system"
+    },
+    {
+      "ticket_id": "T1006",
+      "assigned_user_id": null,
+      "assigned_at": "",
+      "assigned_by": "system"
+    },
+    {
+      "ticket_id": "T1007",
+      "assigned_user_id": "u3",
+      "assigned_at": "2026-06-08T11:28:32.379Z",
+      "assigned_by": "system"
+    },
+    {
+      "ticket_id": "T1008",
+      "assigned_user_id": "u3",
+      "assigned_at": "2026-06-09T08:58:33.509Z",
+      "assigned_by": "system"
+    },
+    {
+      "ticket_id": "T1009",
+      "assigned_user_id": "u3",
+      "assigned_at": "2026-06-09T09:07:33.184Z",
+      "assigned_by": "system"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "n1",
+      "ticket_id": "T1001",
+      "type": "critical_created",
+      "message": "🚨 CRITICAL INCIDENT Created: Production DB Master Node is unresponsive - Out of Disk Space. Assigned to Rahul Sharma.",
+      "sent_at": "2026-06-09T06:58:32.379Z",
+      "channel": "both",
+      "delivered": true
+    },
+    {
+      "id": "n2",
+      "ticket_id": "T1005",
+      "type": "near_breach",
+      "message": "⚠️ NEAR BREACH ALERT: High Latency / SLA Breach Risk on Asia South Gateway has < 30 Minutes remaining! Assigned to Priya Patel.",
+      "sent_at": "2026-06-09T08:28:32.379Z",
+      "channel": "both",
+      "delivered": true
+    },
+    {
+      "ticket_id": "T1008",
+      "type": "standard_assigned",
+      "message": "💡 Ticket T1008 (P2) autoassigned to Priya Patel. Category: Security.",
+      "channel": "in_app",
+      "delivered": true,
+      "id": "notif_cansayw",
+      "sent_at": "2026-06-09T08:58:33.509Z"
+    },
+    {
+      "ticket_id": "T1009",
+      "type": "standard_assigned",
+      "message": "💡 Ticket T1009 (P2) autoassigned to Priya Patel. Category: Security.",
+      "channel": "in_app",
+      "delivered": true,
+      "id": "notif_oxxt0iw",
+      "sent_at": "2026-06-09T09:07:33.185Z"
+    }
+  ],
+  "audit_logs": [
+    {
+      "id": "log1",
+      "ticket_id": "T1001",
+      "user_id": null,
+      "user_name": "AI Ingestion Service",
+      "action": "INGESTED",
+      "description": "Ingested ticket automatically from Gmail alert mailbox.",
+      "created_at": "2026-06-09T06:58:32.379Z"
+    },
+    {
+      "id": "log2",
+      "ticket_id": "T1001",
+      "user_id": null,
+      "user_name": "AI Smart Assignment Engine",
+      "action": "AUTO_ASSIGNED",
+      "description": "System identified Rahul Sharma as highest probability resolver (Db skills, low workload).",
+      "created_at": "2026-06-09T07:10:32.379Z"
+    },
+    {
+      "id": "log3",
+      "ticket_id": "T1001",
+      "user_id": "u2",
+      "user_name": "Rahul Sharma",
+      "action": "WORK_STARTED",
+      "description": "Standard worker Rahul acknowledged the notification and set status to In Progress.",
+      "created_at": "2026-06-09T07:58:32.379Z"
+    },
+    {
+      "id": "log4",
+      "ticket_id": "T1005",
+      "user_id": null,
+      "user_name": "AI Smart Assignment Engine",
+      "action": "AUTO_ASSIGNED",
+      "description": "High priority system network failure routing completed to Priya Patel.",
+      "created_at": "2026-06-09T05:28:32.379Z"
+    },
+    {
+      "id": "log_gtmhdhg",
+      "ticket_id": "T1008",
+      "user_id": null,
+      "user_name": "AI Auto-Ingest Engine",
+      "action": "INGESTED_EMAIL",
+      "description": "Automatically ingested email from GMAIL into Ticket T1008 (Security). Assigned to: Priya Patel.",
+      "created_at": "2026-06-09T08:58:33.510Z"
+    },
+    {
+      "id": "log_e7q37jn",
+      "ticket_id": "T1009",
+      "user_id": null,
+      "user_name": "AI Auto-Ingest Engine",
+      "action": "INGESTED_EMAIL",
+      "description": "Automatically ingested email from GMAIL into Ticket T1009 (Security). Assigned to: Priya Patel.",
+      "created_at": "2026-06-09T09:07:33.185Z"
+    }
+  ]
+}

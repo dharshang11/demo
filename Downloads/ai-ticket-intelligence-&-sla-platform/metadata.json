@@ -1,0 +1,6 @@
+{
+  "name": "AI Ticket Intelligence & SLA Platform",
+  "description": "An enterprise SaaS platform that automates ticket ingestion, classifies issues with Gemini AI, predicts SLA breaches, and manages smart engineering assignments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
